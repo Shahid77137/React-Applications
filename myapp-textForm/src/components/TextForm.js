@@ -2,12 +2,21 @@ import React, {useState} from 'react'
 
 export default function TextForm(props) {
 
-const handleUpClick = () => {
+// const handleUpClick = () => {
+//     // console.log("Uppercase was clicked" +text)
+//     // setText("You have clicked on handleUpClick")
+//     let newText = text.toUpperCase();
+//     setText(newText);
+// }
+
+const handleDownClick = () => {
     // console.log("Uppercase was clicked" +text)
     // setText("You have clicked on handleUpClick")
-    let newText = text.toUpperCase();
+    let newText = text.toLowerCase();
     setText(newText);
 }
+
+
 
 const handleOnChange = (event) => {
     // console.log("On change");
@@ -30,7 +39,8 @@ const handleOnChange = (event) => {
                 <label htmlFor="mybox" className="form-label">Example textarea</label>
                 <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="8"></textarea>
             </div>
-            <button className='btn btn-primary' onClick={handleUpClick}>Convert to Uppercase</button>
+            {/* <button className='btn btn-primary' onClick={handleUpClick}>Convert to Uppercase</button> */}
+            <button className='btn btn-primary' onClick={handleDownClick}>Convert to Uppercase</button>
         </div>
     )
 }
